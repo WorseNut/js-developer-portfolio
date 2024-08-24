@@ -1,67 +1,75 @@
-* {
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans" , sans-serif;
 }
 
-@font-face {
-    font-family: 'Neue Machina';
-    src: url('../fonts/neue-machina-regular.otf');
-}
-
-body {
-    background-color: #000;
+body{
+    background-color: black;
     color: #fff;
+    
 }
 
-a {
+a{
     color: #fff;
     text-decoration: none;
 }
-
-a:hover {
+a:hover{
     text-decoration: underline;
 }
 
-.main {
+.main{
     margin: 1rem;
     padding: 1rem;
     border: 1px solid #fff;
     border-radius: 1rem;
 }
-
-.main::before,
-.main::after {
+.main::before{
     content: '';
-    background-image: url('../img/background.svg');
+    background: linear-gradient(134deg, rgba(255, 0, 0, .7), rgba(255, 0, 0, 0) 29%),
+    linear-gradient(129deg, rgba(55, 200, 200, .8), rgba(55, 200, 200, 0) 27%), 
+    linear-gradient(140deg, rgba(0, 0, 255, .9), rgba(0, 0, 255, 0) 23%);
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     position: fixed;
     top: 0;
     left: 0;
-    width: 140vw;
-    height: 100vh;
+    width: 90vw;
+    height: 95vh;
     z-index: -1;
 }
 
-.main::after {
+.main::after{
     content: '';
-    top: auto;
-    left: auto;
+    background: linear-gradient(132deg, rgba(255,0,0,.7), rgba(255,0,0,0) 17%),
+    linear-gradient(137deg, rgba(55,200,200,.8), rgba(55,200,200,0) 18%),
+    linear-gradient(131deg, rgba(0,0,255,.9), rgba(0,0,255,0) 17%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
     bottom: 0;
     right: 0;
+    width: 154vw;
+    height: 147vh;
+    z-index: -1;
     transform: rotate(180deg);
 }
 
-
-@media only screen and (min-width: 768px) {
-    .main {
+@media only screen and (min-width: 768px){
+    .main{
         max-width: 1024px;
         margin: 1rem auto;
     }
 
-    .main::before,
-    .main::after {
+    .main::before{
+        width: 70vw;
+    }
+
+    .main::after{
         width: 70vw;
     }
 }
